@@ -1,0 +1,33 @@
+ICs:
+XC9572XL, 44-pin TQFP package = http://search.digikey.com/us/en/products/XC9572XL-10VQG44C/122-1448-ND/966629?wt.z_cid=ref_octopart_dkc_buynow
+ATMega1284P, 44-pin TQFP package = http://search.digikey.com/us/en/products/ATMEGA1284P-AU/ATMEGA1284P-AU-ND/1914519
+74LVC244A level converter, 20-pin SSOP package = http://search.digikey.com/us/en/products/74LVC244ADB,112/568-1582-5-ND/763186
+800mA 1117 3.3V regulator, SOT223 package = http://search.digikey.com/us/en/products/LD1117S33TR/497-1242-1-ND/586242
+20 MHz 8pF SMD crystal, NX5032 package = http://search.digikey.com/us/en/products/NX5032GA-20.000000MHZ-LN-CD-1/644-1039-1-ND/1128911
+
+Connectors:
+DB-19 connector, male solder type = http://www.iec-usa.com/cgi-bin/iec/fullpic?G2FS4qvh;DB19MS;41
+IDC20 connector = http://search.digikey.com/us/en/products/SBH11-PBPC-D10-ST-BK/S9172-ND/1990065
+AVR ISP connector (2x3 IDC) = http://search.digikey.com/us/en/products/75869-131LF/609-2845-ND/1302569
+8-pin male 0.1 inch header
+2-pin male 0.1 inch header
+8-pin female 0.1 inch header
+2-pin female 0.1 inch header
+
+Passives:
+10x 0.1uF capacitors, 0805 package
+1x 33uF tantalum cap, 0805 package
+2x 18pF caps, 0805 package 
+3x 220 ohm resistors, 0805 package
+1x 10K ohm resistor, 0805 package
+
+Miscellaneous:
+Nokia 5110 graphical LCD = https://www.sparkfun.com/products/10168
+2x LEDs, 0805 package = http://search.digikey.com/us/en/products/APT2012SGC/754-1131-1-ND/1747848
+4x B3FS tactile switch, SMD = http://search.digikey.com/scripts/dksearch/dksus.dll?pname&WT.z_cid=ref_octopart_dkc_buynow&site=us&lang=en&name=SW1141-ND
+TE 2041021-4 SD card holder = http://search.digikey.com/us/en/products/2041021-4/A101492CT-ND/2571152
+
+Tools:
+AVRISP mkII AVR programmer (or equivalent) = http://www.digikey.com/product-detail/en/ATAVRISP2/ATAVRISP2-ND/898891?WT.mc_id=PLA_898891&gclid=CO_xwcjWnbQCFYp_QgodXX0AUQ
+SD or SDHC card
+

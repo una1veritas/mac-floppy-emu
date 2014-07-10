@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# AvrStudio Solution File, Format Version 11.00
+Project("{E66E83B9-2572-4076-B26E-6BE79FF3018A}") = "floppyemu", "floppyemu.cppproj", "{E27520EB-9B21-411F-B8C6-71C8E4B8B1B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|AVR = Debug|AVR
+		Release|AVR = Release|AVR
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E27520EB-9B21-411F-B8C6-71C8E4B8B1B6}.Debug|AVR.ActiveCfg = Debug|AVR
+		{E27520EB-9B21-411F-B8C6-71C8E4B8B1B6}.Debug|AVR.Build.0 = Debug|AVR
+		{E27520EB-9B21-411F-B8C6-71C8E4B8B1B6}.Release|AVR.ActiveCfg = Release|AVR
+		{E27520EB-9B21-411F-B8C6-71C8E4B8B1B6}.Release|AVR.Build.0 = Release|AVR
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
