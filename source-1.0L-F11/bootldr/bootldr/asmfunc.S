@@ -48,7 +48,7 @@ init_spi:
 .global dly_100us
 .func dly_100us
 dly_100us:
-	ldi	r24, lo8(F_CPU / 100000)	/* Loop counter */
+	ldi	r24, lo8(16000000 / 100000) ;(F_CPU / 100000)	/* Loop counter */
 1:	sbiw	r30, 1		/* 10 clocks per loop */
 	sbiw	r30, 1
 	sbiw	r30, 1

@@ -31,11 +31,15 @@
 #include "ports.h"
 #include "diskmenu.h"
 
+#ifdef ENABLE_ORIGINAL_COMPILER_WORKAROUND
+
 // work-around for compiler bug
 #undef PROGMEM 
 #define PROGMEM __attribute__(( section(".progmem.data") )) 
 #undef PSTR 
 #define PSTR(s) (__extension__({static prog_char __c[] PROGMEM = (s); &__c[0];})) 
+
+#endif
 
 // I/O pin assignments
 #define CPLD_RESET_PORT B

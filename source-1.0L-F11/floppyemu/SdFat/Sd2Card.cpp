@@ -36,7 +36,7 @@
 
 
 #include <Sd2Card.h>
-#include "..\millitimer.h"
+#include "../millitimer.h"
 
 //------------------------------------------------------------------------------
 #ifndef SOFTWARE_SPI

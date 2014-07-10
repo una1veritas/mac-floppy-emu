@@ -7,6 +7,8 @@
 
 #include <avr/io.h>
 
+#ifdef USE_BOOTLDR_MAIN
+
 int main(void)
 {
     while(1)
@@ -14,3 +16,5 @@ int main(void)
         //TODO:: Please write your application code 
     }
 }
+
+#endif
