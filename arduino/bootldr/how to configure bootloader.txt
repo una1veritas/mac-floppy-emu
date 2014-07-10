@@ -1,0 +1,32 @@
+1. In the application project, modify the "memory settings" linker option. In the FLASH segment add:
+   .bootldrinfo=0xF7FC (for atmega with 128K Flash), or
+   .bootldrinfo=0x37FC (for atmega with 32K Flash)
+   It should be 8 bytes (4 words) before the start of the bootloader area.
+
+2. Change the application version number as desired.
+
+3. Rebuild the application to generate a new .hex file
+
+4. In the bootloader project, modify the "memory settings" linker option. In the FLASH segment add:
+   .text=0xF800 (for atmega with 128K Flash), or
+   .text=0x3800 (for atmega with 32K Flash)
+   It should be the start of the bootloader area in words. These numbers assume a 4K bootloader.
+
+5. Modify the "Symbols" compiler and assembler options. Change
+   .text=0x1F000 (for atmega with 128K Flash), or
+   .text=0x7000 (for atmega with 32K Flash)
+   It should be the start of the bootloader area in bytes. These numbers assume a 4K bootloader.
+
+6. Rebuild the bootloader project to generate a new .hex file
+
+7. Append the bootloader to the application .hex file. You can do this in a text editor, after 
+   deleting the line :00000001FF at the end of the application section, or using srec_cat:
+   srec_cat application.hex -intel bootloader.hex -intel -o merged.hex -intel
+
+8. Program the merged .hex file to the board, just like you would for any other .hex
+
+9. Connect to the board with the ISP programmer. Set the BOOTSZ fuse to 2048W (for 4K bootloader)
+   and BOOTRST fuse to on/true.
+
+10. To generate the .bin file used by the bootloader to flash new code updates, use
+   avr-objcopy -O binary -R .eeprom -R .fuse -R .lock -R .signature  application.elf application.bin
