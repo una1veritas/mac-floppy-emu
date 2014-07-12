@@ -1,1 +1,6 @@
 .o
+.hex
+.bin
+
+.cproject
+.project
