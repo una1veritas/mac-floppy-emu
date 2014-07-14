@@ -4,5 +4,4 @@ avrtarget/ExtendedRAM=false
 avrtarget/MCUType=atmega1284p
 avrtarget/UseEEPROM=false
 avrtarget/UseExtendedRAMforHeap=true
-avrtarget/perConfig=false
 eclipse.preferences.version=1

@@ -38,7 +38,6 @@
 #define PSTR(s) (__extension__({static prog_char __c[] PROGMEM = (s); &__c[0];})) 
 #endif
 
-
 #define STATUS_LED_PORT B
 #define STATUS_LED_PIN 3
 
