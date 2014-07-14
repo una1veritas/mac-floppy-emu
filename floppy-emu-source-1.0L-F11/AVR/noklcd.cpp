@@ -306,7 +306,7 @@ void LcdClear(void)
 
 void LcdReset(void)
 {
-	lcd_vop = 0xBF;
+	lcd_vop = 0xa4; //0xBF;
 	lcd_bias = 0x14;
 	lcd_tempCoef = 0x04;
 	
