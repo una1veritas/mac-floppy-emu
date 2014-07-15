@@ -11,6 +11,14 @@
 	or from mailto:steve@bigmessowires.com.
 */
 
+/*
+ * requires linker option:
+ * -Wl,-section-start=.bootldrinfo=0x1eff8
+ * post compilation task:
+ * avr-objcopy -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "${BuildArtifactFileBaseName}.elf" "${BuildArtifactFileBaseName}..hex"
+ *
+ */
+
 #include <math.h>
 #include <avr/eeprom.h>
 #include <avr/io.h>
