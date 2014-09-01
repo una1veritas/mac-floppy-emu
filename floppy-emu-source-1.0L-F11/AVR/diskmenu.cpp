@@ -193,7 +193,7 @@ void InitDiskMenu(SdFat& sd)
 			SdBaseFile::dirName(dir, pFileEntries[diskMenuEntryCount].shortName);
 			pFileEntries[diskMenuEntryCount].imageFileType = imageType;
 			diskMenuEntryCount++;	
-		}									
+		}
 	} 
 	
 	// add up directory, if not at the root
@@ -204,7 +204,7 @@ void InitDiskMenu(SdFat& sd)
 		pFileEntries[diskMenuEntryCount].imageFileType = DISK_IMAGE_UP_DIRECTORY;
 		diskMenuEntryCount++;	
 	}
-				
+
 	char file1[FILENAME_LEN+1], file2[FILENAME_LEN+1], temp[FILENAME_LEN+1];
 	eImageType tempType;
 	
@@ -223,7 +223,21 @@ void InitDiskMenu(SdFat& sd)
 				file2[x] = toupper(file2[x]);
 			
 			// sort directories before regular files	
-			int diff = strncmp(file1, file2, FILENAME_LEN+1);
+			int diff = 0; // = strncmp(file1, file2, FILENAME_LEN+1);
+			int p;
+			for (p = 0; i < FILENAME_LEN+1; p++) {
+				diff = file1[p] - file2[p];
+				if ( diff != 0 ) {
+					if ( file1[p] == '.' )
+						diff = 127 - file2[2];
+					else if ( file2[p] == '.' )
+						diff = file1[p] - 127;
+					break;
+				}
+				if ( file1[p] == 0 )
+					break;
+			}
+			// possibly either directory or file is the major key
 			if (pFileEntries[i].imageFileType == DISK_IMAGE_DIRECTORY ||
 				pFileEntries[i].imageFileType == DISK_IMAGE_UP_DIRECTORY)
 				diff -= 1000;
